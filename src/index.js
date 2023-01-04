@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 function App() {
-  return <div className="App"> 
-   <body>
+  return (
+    <div className="App">
+      <body>
         <div className="container mycontainer">
           <form id="whole-searchbar">
             <div className="row">
@@ -56,7 +58,10 @@ function App() {
         <script src="src/script.js"></script>
       </body>
   </div>
+  );
 }
+
+
 root.render(
   <React.StrictMode>
     <App />
