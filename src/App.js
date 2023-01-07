@@ -44,7 +44,7 @@ function App() {
         </div>
         <copyright
           ><a
-            href="https://github.com/aandrews31/Weather-app-final-linked"
+            href="https://github.com/aandrews31/weather-app-react"
             target="_blank"
             >Open-source Code</a
           >
