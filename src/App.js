@@ -29,8 +29,8 @@ function App() {
             <div className="cityBox col">
               <h1 id="city-name"><br /></h1>
               <div>
-                <a id="temp"> </a><a href="#" id="celsius" className="active">°C</a>
-                <img src="" id="icon" />
+                <button href="" id="temp"> </button><button href="" id="celsius" className="active">°C</button>
+                <img alt="icon" src="" id="icon" />
               </div>
               <h1 id="time">Formatted Time</h1>
               <ul>
@@ -44,6 +44,7 @@ function App() {
         </div>
         <copyright
           ><a
+            rel="noreferrer"
             href="https://github.com/aandrews31/weather-app-react"
             target="_blank"
             >Open-source Code</a
