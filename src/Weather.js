@@ -26,20 +26,20 @@ export default function Weather() {
       </div>
       <div class="row">
         <div class="cityBox col">
-          <h1 id="city-name"><br /></h1>
+          <h1 id="city-name">City Name<br /></h1>
           <div>
-            <a id="temp"> </a><a href="#" id="celsius" class="active">°C</a>
+            <a id="temp"> </a><a href="#" id="celsius" class="active">Temp °C</a>
             <img src="" id="icon" />
           </div>
           <h1 id="time">Formatted Time</h1>
           <ul>
-            <li>• <span id="description"></span></li>
+            <li>• <span id="description">Weather Description</span></li>
             <li>• Humidity: <span id="humidity"></span>%</li>
             <li>• Wind: <span id="wind"></span>km/hr</li>
           </ul>
         </div>
       </div>
-      <div class="weather-forecast" id="forecast"></div>
+      <div class="weather-forecast" id="forecast">Five-Day Forecast</div>
   </div>
   )
 }
