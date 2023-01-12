@@ -23,14 +23,13 @@ export default function Weather() {
         <button className="btn btn-success w-25" id="current-location-button">
           Current
         </button>
-        <img alt="icon" src="" id="icon" />
       </div>
       <div className="row">
         <div className="cityBox col">
           <h1 id="city-name">City Name<br /></h1>
           <div>
             <a id="temp"> </a><a href="#" id="celsius" className="active">Temp °C</a>
-            <img src="" id="icon" />
+            <img alt="icon" src="" id="icon" />
           </div>
           <h1 id="time">Formatted Time</h1>
           <ul>
