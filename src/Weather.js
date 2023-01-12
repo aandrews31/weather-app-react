@@ -5,31 +5,31 @@ export default function Weather() {
   return (
   <div className="Weather">
     <form id="whole-searchbar">
-        <div class="row">
-          <div class="col-10">
+        <div className="row">
+          <div className="col-10">
             <input
               id="city-input"
-              class="searchbar"
+              className="searchbar"
               type="search"
               placeholder="Change City..."
             />
           </div>
-          <div class="col-2">
-            <input type="submit" value="Search" class="btn btn-primary w-100" />
+          <div className="col-2">
+            <input type="submit" value="Search" className="btn btn-primary w-100" />
           </div>
         </div>
       </form>
-      <div class="col-12">
-        <button class="btn btn-success w-25" id="current-location-button">
+      <div className="col-12">
+        <button className="btn btn-success w-25" id="current-location-button">
           Current
         </button>
         <img alt="icon" src="" id="icon" />
       </div>
-      <div class="row">
-        <div class="cityBox col">
+      <div className="row">
+        <div className="cityBox col">
           <h1 id="city-name">City Name<br /></h1>
           <div>
-            <a id="temp"> </a><a href="#" id="celsius" class="active">Temp °C</a>
+            <a id="temp"> </a><a href="#" id="celsius" className="active">Temp °C</a>
             <img src="" id="icon" />
           </div>
           <h1 id="time">Formatted Time</h1>
@@ -40,7 +40,7 @@ export default function Weather() {
           </ul>
         </div>
       </div>
-      <div class="weather-forecast" id="forecast">Five-Day Forecast</div>
+      <div className="weather-forecast" id="forecast">Five-Day Forecast</div>
   </div>
   );
 }
