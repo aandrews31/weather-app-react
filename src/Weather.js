@@ -23,6 +23,7 @@ export default function Weather() {
         <button class="btn btn-success w-25" id="current-location-button">
           Current
         </button>
+        <img alt="icon" src="" id="icon" />
       </div>
       <div class="row">
         <div class="cityBox col">
