@@ -28,7 +28,8 @@ export default function Weather() {
         <div className="cityBox col">
           <h1 id="city-name">City Name<br /></h1>
           <div>
-            <a id="temp"> </a><a href="#" id="celsius" className="active">Temp °C</a>
+            <button href="" id="temp"> </button>
+            <button href="" id="celsius" className="active">°C</button>
             <img alt="icon" src="" id="icon" />
           </div>
           <h1 id="time">Formatted Time</h1>
