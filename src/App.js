@@ -8,6 +8,6 @@ function App() {
       <Weather />
     </div>
   </div>
-  )
+  );
 }
 export default App;
