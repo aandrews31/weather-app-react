@@ -41,5 +41,5 @@ export default function Weather() {
       </div>
       <div class="weather-forecast" id="forecast">Five-Day Forecast</div>
   </div>
-  )
+  );
 }
