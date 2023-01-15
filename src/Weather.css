@@ -3,6 +3,10 @@
     background: rgb(211, 211, 211);
     transition: 150ms ease-in-out;
   }
+
+  footer {
+    padding: 10px;
+  }
   ul {
     font-size: 18px;
     font-weight: 400;
@@ -32,11 +36,12 @@
     font-size: 30px;
   }
   .cityBox {
-    margin: 0 auto;
-    border: 2px solid;
+    text-align: center;
+    border: 1px solid;
     padding: 30px;
     border-color: #DEE2E6;
     color: #595C5F;
+    border-radius: 7px;
   }
 
 .matt-name {
