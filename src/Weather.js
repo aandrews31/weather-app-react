@@ -4,33 +4,32 @@ import "./Weather.css";
 export default function Weather() {
   return (
   <div className="Weather">
-    <form id="whole-searchbar">
-        <div className="row">
-          <div className="col-10">
+    <form>
+      <div className="row">
+          <div className="col-9">
             <input
-              id="city-input"
-              className="searchbar"
+              className="form-control"
               type="search"
               placeholder="Change City..."
             />
           </div>
-          <div className="col-2">
+          <div className="col-3">
             <input type="submit" value="Search" className="btn btn-primary w-100" />
           </div>
-        </div>
+      </div>
       </form>
-      <div className="col-12">
-        <button className="btn btn-success w-25" id="current-location-button">
+      <div className="col">
+        <button className="btn btn-success" id="current-location-button">
           Current
         </button>
       </div>
-      <div className="row">
-        <div className="cityBox col">
+      <div className="">
+        <div className="cityBox">
           <h1 id="city-name">City Name<br /></h1>
           <div>
-            <button href="" id="temp"> </button>
-            <button href="" id="celsius" className="active">°C</button>
-            <img alt="icon" src="" id="icon" />
+            <span href="" id="temp">29</span>
+            <span href="" id="celsius">°C</span>
+            <img className="weather-icon" alt="&#9788;" src="" id="icon" />
           </div>
           <h1 id="time">Formatted Time</h1>
           <ul>
