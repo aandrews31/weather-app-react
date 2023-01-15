@@ -35,9 +35,13 @@
     margin: 0 auto;
     border: 2px solid;
     padding: 30px;
+    border-color: #DEE2E6;
+    color: #595C5F;
   }
 
-
+.matt-name {
+  color: #595C5F;
+}
   .part-sun {
     color: rgb(219, 179, 0);
     font-size: 30px;

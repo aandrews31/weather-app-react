@@ -39,7 +39,14 @@ export default function Weather() {
           </ul>
         </div>
       </div>
-      <div className="weather-forecast" id="forecast">Five-Day Forecast</div>
+      <footer><copyright
+      ><a
+        href="https://github.com/aandrews31/weather-app-react"
+        target="_blank"
+        >Open-source Code </a
+      >
+      <a class="matt-name">by Matt Delac</a></copyright
+    ></footer>
   </div>
   );
 }
