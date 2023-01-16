@@ -57,7 +57,6 @@ export default function Weather() {
             <copyright>
               <a 
               href="https://github.com/aandrews31/weather-app-react"
-              target="_blank"
               alt="weather-app"
               >Open-source Code
               </a>
