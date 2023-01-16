@@ -43,8 +43,8 @@ export default function Weather() {
             <div className="cityBox">
               <h1 id="city-name">{weatherData.city}<br /></h1>
               <div className="currentTemp">
-                  <span href="" id="temp">{weatherData.temperature}</span>
-                  <span href="" id="celsius">°C</span>
+                  <span id="temp">{weatherData.temperature}</span>
+                  <span id="celsius">°C</span>
                   <img alt={weatherData.description} src={weatherData.iconUrl} id="icon" />
               </div>
               <h1 id="time">Formatted Time</h1>
@@ -58,9 +58,10 @@ export default function Weather() {
               <a 
               href="https://github.com/aandrews31/weather-app-react"
               target="_blank"
+              alt="weather-app"
               >Open-source Code
               </a>
-              <span class="matt-name">by Matt Delac</span>
+              <span className="matt-name">by Matt Delac</span>
             </copyright>
         </div>
       );
