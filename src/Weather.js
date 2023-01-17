@@ -12,7 +12,7 @@ export default function Weather() {
       humidity: response.data.temperature.humidity,
       date: "Wednesday 07:00",
       wind: response.data.wind.speed,
-      description: response.data.condition,
+      description: response.data.condition.description,
       iconUrl: "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-night.png",
       city: response.data.name
     });
@@ -50,8 +50,8 @@ export default function Weather() {
               <h1 id="time">Formatted Time</h1>
               <ul>
                 <li>• <span id="description">{weatherData.description}</span></li>
-                <li>• Humidity: <span id="humidity">{weatherData.humidity}</span>%</li>
-                <li>• Wind: <span id="wind">{weatherData.wind}</span>km/hr</li>
+                <li>• humidity: <span id="humidity">{weatherData.humidity}</span>%</li>
+                <li>• wind: <span id="wind">{weatherData.wind}</span>km/hr</li>
               </ul>
             </div>
             <copyright>
