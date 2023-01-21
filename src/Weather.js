@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ready: false});
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -19,16 +20,35 @@ export default function Weather() {
     });
   }
 
+function search() {
+  const apiKey= "83bda23c40od4det4576797c7cafbd4d";
+  let city= "London";
+  let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(handleResponse);
+  return "loading...";
+}
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+
+  }
+
   if (weatherData.ready) {
     return (
         <div className="Weather">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="row">
                 <div className="col-9">
                   <input
                   className="form-control"
                   type="search"
                   placeholder="Change City..."
+                  onChange={handleCityChange}
                   />
                 </div>
                 <div className="col-3">
@@ -36,42 +56,11 @@ export default function Weather() {
                 </div>
             </div>
           </form>
-          <div className="col">
-            <button className="btn btn-success" id="current-location-button">
-              Current
-            </button>
-          </div>
-            <div className="cityBox">
-              <h1 id="city-name">{weatherData.city}<br /></h1>
-              <div className="currentTemp">
-                  <span id="temp">{weatherData.temperature}</span>
-                  <span id="celsius">°C</span>
-                  <img alt={weatherData.description} src={weatherData.iconUrl} id="icon" />
-              </div>
-              <h1 id="time">
-                <FormattedDate date= {weatherData.date} />
-              </h1>
-              <ul>
-                <li>• <span id="description">{weatherData.description}</span></li>
-                <li>• humidity: <span id="humidity">{weatherData.humidity}</span>%</li>
-                <li>• wind: <span id="wind">{weatherData.wind}</span>km/hr</li>
-              </ul>
-            </div>
-            <copyright>
-              <a 
-              href="https://github.com/aandrews31/weather-app-react"
-              alt="weather-app"
-              >Open-source Code
-              </a>
-              <span className="matt-name">by Matt Delac</span>
-            </copyright>
+          <WeatherInfo data={weatherData}/>
         </div>
       );
     } else {
-    const apiKey= "83bda23c40od4det4576797c7cafbd4d";
-    let city= "London";
-    let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-    axios.get(apiUrl).then(handleResponse);
-    return "loading...";
+      search();
+      return "Loading...";
   }
 }

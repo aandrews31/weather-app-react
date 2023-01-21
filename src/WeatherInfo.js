@@ -1,0 +1,38 @@
+import React from "react"
+import FormattedDate from "./FormattedDate";
+
+export default function WeatherInfo(props) {
+    return (
+        <div className="WeatherInfo">
+        <div className="col">
+            <button className="btn btn-success" id="current-location-button">
+              Current
+            </button>
+          </div>
+            <div className="cityBox">
+              <h1 id="city-name">{props.data.city}<br /></h1>
+              <div className="currentTemp">
+                  <span id="temp">{props.data.temperature}</span>
+                  <span id="celsius">°C</span>
+                  <img alt={props.data.description} src={props.data.iconUrl} id="icon" />
+              </div>
+              <h1 id="time">
+                <FormattedDate date= {props.data.date} />
+              </h1>
+              <ul>
+                <li>• <span id="description">{props.data.description}</span></li>
+                <li>• humidity: <span id="humidity">{props.data.humidity}</span>%</li>
+                <li>• wind: <span id="wind">{props.data.wind}</span>km/hr</li>
+              </ul>
+            </div>
+            <footer>
+              <a 
+              href="https://github.com/aandrews31/weather-app-react"
+              alt="weather-app"
+              >Open-source Code
+              </a>
+              <span className="matt-name">by Matt Delac</span>
+            </footer>
+            </div>
+    );
+}
