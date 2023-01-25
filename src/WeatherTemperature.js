@@ -12,10 +12,6 @@ export default function WeatherTemperature(props) {
         setUnit("celsius");
     }
 
-    function fahrenheit() {
-        return (props.celsius * 9) / 5 + 32;
-    }
-
     if (unit === "celsuis") {
         return (
             <span className="WeatherTemperature">
