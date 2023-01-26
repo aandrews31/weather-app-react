@@ -1,4 +1,4 @@
-import { Axios } from "axios";
+import axios from "axios";
 import React from "react";
 import "./WeatherForecast.css";
 
@@ -6,10 +6,10 @@ export default function WeatherForecast(props) {
     function handleResponse(response) {
         console.log(response.data);
     }
-    let city = props.query;
-    let apiKey = "83bda23c40od4det4576797c7cafbd4d";
+    let city = props.data.city;
+    let apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-    Axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse);
     return (
         <div className="WeatherForecast">
         <div className="row">

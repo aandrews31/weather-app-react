@@ -16,13 +16,13 @@ export default function Weather(props) {
       date: new Date (response.data.time) * 1000,
       wind: response.data.wind.speed,
       description: response.data.condition.description,
-      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition[0].icon}.png`,
+      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       city: response.data.city,
     });
   }
 
 function search() {
-  const apiKey= "83bda23c40od4det4576797c7cafbd4d";
+  const apiKey= "bd79ao40tde3dec118ca46bc3e6dd55f";
   let apiUrl= `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(handleResponse);
   return "loading...";
