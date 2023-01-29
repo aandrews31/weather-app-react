@@ -6,9 +6,10 @@ export default function WeatherForecast(props) {
     function handleResponse(response) {
         console.log(response.data);
     }
-    let city = props.data.city;
-    let apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    let apiKey = "9e55ce91de1e84df9f3dbe33f9c2133a";
+    let longitude = props.coordinates.lon;
+    let latitude = props.coordinates.lat;
+    let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     return (
         <div className="WeatherForecast">
