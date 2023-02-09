@@ -17,9 +17,11 @@ export default function WeatherInfo(props) {
               </div>
               <img alt={props.data.description} src={props.data.iconUrl} id="icon" />
               <h1 id="time">
-                <li>
+                <ul>
+                  <li>
                 <FormattedDate date= {props.data.date} />
-                </li>
+                  </li>
+                </ul>
               </h1>
               <ul>
                 <li>• <span id="description">{props.data.description}</span></li>
