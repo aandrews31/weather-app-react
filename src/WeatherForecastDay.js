@@ -22,7 +22,7 @@ return (
         <img alt={props.data.description} src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
         id="icon"/>
         <div className="WeatherForecast-temperatures">
-        <span className="WeatherForecast-temperature-max">{maxTemperature()}°</span>
+        <span className="WeatherForecast-temperature-max">Hellos{maxTemperature()}°</span>
         <span className="WeatherForecast-temperature-min">{minTemperature()}°</span>
         </div>
     </div>
