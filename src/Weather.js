@@ -66,7 +66,7 @@ function search() {
               alt="weather-app"
               >Open-source Code
               </a>
-              <span className="matt-name">by Matt Delac</span>
+              <span className="matt-name"> by Matt Delac</span>
             </footer>
             </div>
         </div>
