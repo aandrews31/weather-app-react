@@ -42,6 +42,7 @@ function search() {
   if (weatherData.ready) {
     return (
         <div className="Weather">
+          <div className="cityBox">
           <form onSubmit={handleSubmit}>
             <div className="row">
                 <div className="col-9">
@@ -59,6 +60,15 @@ function search() {
           </form>
           <WeatherInfo data={weatherData}/>
           <WeatherForecast coordinates={weatherData.coordinates}/>
+          <footer>
+              <a 
+              href="https://github.com/aandrews31/weather-app-react"
+              alt="weather-app"
+              >Open-source Code
+              </a>
+              <span className="matt-name">by Matt Delac</span>
+            </footer>
+            </div>
         </div>
       );
     } else {

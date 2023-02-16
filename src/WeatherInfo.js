@@ -10,7 +10,6 @@ export default function WeatherInfo(props) {
               Current
             </button>
           </div>
-            <div className="cityBox">
               <h1 id="city-name">{props.data.city}<br /></h1>
               <div className="currentTemp">
                 <WeatherTemperature celsius={props.data.temperature}/>
@@ -28,15 +27,6 @@ export default function WeatherInfo(props) {
                 <li>• humidity: <span id="humidity">{props.data.humidity}</span>%</li>
                 <li>• wind: <span id="wind">{props.data.wind}</span>km/hr</li>
               </ul>
-            </div>
-            <footer>
-              <a 
-              href="https://github.com/aandrews31/weather-app-react"
-              alt="weather-app"
-              >Open-source Code
-              </a>
-              <span className="matt-name">by Matt Delac</span>
-            </footer>
             </div>
     );
 }
