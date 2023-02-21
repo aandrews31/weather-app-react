@@ -64,6 +64,8 @@ function search() {
               <a 
               href="https://github.com/aandrews31/weather-app-react"
               alt="weather-app"
+              target="_blank"
+              rel="noopener noreferrer"
               >Open-source Code
               </a>
               <span className="matt-name"> by Matt Delac</span>
