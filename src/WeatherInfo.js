@@ -9,7 +9,7 @@ export default function WeatherInfo(props) {
               <div className="currentTemp">
                 <WeatherTemperature celsius={props.data.temperature}/>
               </div>
-              <img alt={props.data.description} src={props.data.iconUrl} id="icon" />
+              <img alt={props.data.description} src= {`http://openweathermap.org/img/wn/${props.data.iconUrl}@2x.png`} id="icon" />
               <h1 id="time">
                 <ul>
                   <li>
